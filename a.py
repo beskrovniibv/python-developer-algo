@@ -13,7 +13,10 @@ if LOCAL:
 
 
 def solution(root) -> int:
-    return max(root.value, solution(root.left) if root.left else root.value, solution(root.right) if root.right else root.value)
+    return max(
+        root.value, solution(root.left) if root.left else root.value,
+        solution(root.right) if root.right else root.value
+    )
 
 
 def test():
